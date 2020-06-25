@@ -7,6 +7,7 @@ class Item(models.Model):
 
     class Meta:
         db_table = 'item'
+        verbose_name = 'アイテム'
         verbose_name_plural = 'アイテム'
 
     SEX_CHOICES = (
