@@ -27,7 +27,7 @@
         <div class="col-12">
             <a class="btn btn-secondary filtered" style="visibility:hidden" href="/?page=1">検索を解除</a>
             <div class="float-right">
-                <a class="btn btn-outline-secondary" href="{% url 'create' %}">新規</a>
+                <a class="btn btn-outline-secondary" href="{% url 'roster:item_create' %}">新規</a>
                 <a class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal" href="#">検索</a>
             </div>
         </div>
@@ -63,9 +63,9 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="float-right">
-                                <a class="btn btn-outline-secondary " href="{% url 'item_detail' item.pk %}">詳細</a>
-                                <a class="btn btn-outline-secondary " href="{% url 'item_update' item.pk %}">編集</a>
-                                <a class="btn btn-outline-secondary " href="{% url 'item_delete' item.pk %}">削除</a>
+                                <a class="btn btn-outline-secondary " href="{% url 'roster:item_detail' item.pk %}">詳細</a>
+                                <a class="btn btn-outline-secondary " href="{% url 'roster:item_update' item.pk %}">編集</a>
+                                <a class="btn btn-outline-secondary " href="{% url 'roster:item_delete' item.pk %}">削除</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
     <div class="row">
         <div class="col-12">
             <div class="float-right">
-                <a class="btn btn-outline-secondary" href="{% url 'create' %}">新規</a>
+                <a class="btn btn-outline-secondary" href="{% url 'roster:item_create' %}">新規</a>
                 <a class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal" href="#">検索</a>
             </div>
         </div>

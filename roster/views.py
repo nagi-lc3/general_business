@@ -12,7 +12,7 @@ from .forms import ItemForm
 # 検索一覧画面
 class ItemFilterView(LoginRequiredMixin, FilterView):
     model = Item
-    template_name = 'item_filter.html'
+    template_name = 'roster/index.html'
     filterset_class = ItemFilter
     # デフォルトの並び順を新しい順とする
     queryset = Item.objects.all().order_by('-created_at')
@@ -39,27 +39,27 @@ class ItemFilterView(LoginRequiredMixin, FilterView):
 # 詳細画面
 class ItemDetailView(LoginRequiredMixin, DetailView):
     model = Item
-    template_name = 'item_detail.html'
+    template_name = 'roster/item_detail.html'
 
 
 # 登録画面
 class ItemCreateView(LoginRequiredMixin, CreateView):
     model = Item
-    template_name = 'item_create.html'
+    template_name = 'roster/item_create.html'
     form_class = ItemForm
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('roster:index')
 
 
 # 更新画面
 class ItemUpdateView(LoginRequiredMixin, UpdateView):
     model = Item
-    template_name = 'item_update.html'
+    template_name = 'roster/item_update.html'
     form_class = ItemForm
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('roster:index')
 
 
 # 削除画面
 class ItemDeleteView(LoginRequiredMixin, DeleteView):
     model = Item
-    template_name = 'item_delete.html'
-    success_url = reverse_lazy('index')
+    template_name = 'roster/item_delete.html'
+    success_url = reverse_lazy('roster:index')
