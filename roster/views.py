@@ -10,7 +10,7 @@ from .forms import ItemForm
 
 
 # 検索一覧画面
-class ItemFilterView(LoginRequiredMixin, FilterView):
+class IndexView(LoginRequiredMixin, FilterView):
     model = Item
     template_name = 'roster/index.html'
     filterset_class = ItemFilter
